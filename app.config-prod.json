@@ -1,0 +1,29 @@
+{
+  "ecmHost": "http://172.16.0.171:8090",
+  "bpmHost": "http://172.16.0.8:8080",
+    "application": {
+        "name": "Alfresco"
+    },
+    "pagination": {
+        "size": 25
+    },
+    "files": {
+            "excluded": [".DS_Store", "desktop.ini", ".git"]
+    },
+    "activiti": {
+        "rest": {
+            "fields": [
+                {
+                    "processId": "0",
+                    "taskId": "7501",
+                    "fieldId": "label10",
+                    "values": [
+                        { "id": "f1", "name": "Field 1" },
+                        { "id": "f2", "name": "Field 2" },
+                        { "id": "f3", "name": "Field 3" }
+                    ]
+                }
+            ]
+        }
+    }
+}

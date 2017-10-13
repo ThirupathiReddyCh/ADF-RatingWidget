@@ -1,0 +1,53 @@
+<button md-icon-button (click)="showDialog = !showDialog" class="btn">
+        <md-icon>widgets</md-icon>
+    </button> 
+    <rating-dailog-component [(visible)]="showDialog">
+        <div *ngIf="rateDiv">
+        <h2>Rate<br> this <br>page</h2>
+        <md-button-toggle md-menu-item (click)="getRating('good')"><i class="material-icons green600">sentiment_very_satisfied</i></md-button-toggle>
+          <h4>Good</h4>
+          <md-button-toggle md-menu-item (click)="getRating('ok')"><i class="material-icons yellow600">sentiment_neutral</i></md-button-toggle>
+          <h4>Ok</h4>
+          <md-button-toggle md-menu-item (click)="getRating('poor')"><i class="material-icons red600">sentiment_very_dissatisfied</i></md-button-toggle>     <h4>Poor</h4>
+          <button (click)="showDialog = !showDialog" class="dialog__close-btn"><h1>X</h1></button>
+        </div>
+        <div *ngIf="ratedDiv" class="mydiv">
+          <div *ngIf="ratingValue=='good'">You rated this page as <span class="ratedClassGreen"> Good</span> <i class="material-icons green600">sentiment_very_satisfied</i></div>
+          <div *ngIf="ratingValue=='ok'">You rated this page as <span class="ratedClassYellow"> Ok</span><i class="material-icons yellow600">sentiment_neutral</i> </div>
+          <div *ngIf="ratingValue=='poor'">You rated this page as<span class="ratedClassRed"> Poor</span><i class="material-icons red600">sentiment_very_dissatisfied</i> </div>
+            <h3>provide additional feedback</h3>
+            <h4>Did this content save you the trouble of <br>having call support?</h4>
+       <md-radio-group class="example-radio-group" [(ngModel)]="answer1">
+         <md-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+           {{season}}
+         </md-radio-button>
+       </md-radio-group>
+       <div class="example-selected-value">Your answer is: {{answer1}}</div>
+            <h4>How likely are you to recommend this site to <br>a friend or colleague?</h4>
+            <table>
+              <tr>
+              <td>
+              </td>
+              </tr>
+            </table>
+            <md-radio-group class="example-radio-group" [(ngModel)]="answer2">
+         <md-radio-button class="example-radio-button" *ngFor="let selectedValue of recommendList" [value]="selectedValue">
+           {{selectedValue}}
+         </md-radio-button>
+       </md-radio-group>
+       <div class="example-selected-value">Your answer is: {{answer2}}</div>
+       <h4>What can we do do to improve this page?</h4>
+       <div style="padding-left: 8px;">
+       <textarea ng-model="myTextarea" class="text-area-style" cols="50"
+       rows="7"></textarea>    </div>
+       <div style="padding-left: 8px;"><button (click)="submitRating()" class="buttonClass">Submit Feedback</button></div>    
+       <div (click)="showDialog = !showDialog" style="padding-left: 191px;
+       font-size: 20px;
+       color: #319EDE;
+       font-weight: bold;font-family: sans-serif;">No Thanks</div>
+          </div>
+          <div>
+            <button (click)="showDialog = !showDialog" class="dialog__close-btn"><h1>X</h1></button>
+              <p><br> {{ message }}<br></p>
+            </div>
+    </rating-dailog-component>
