@@ -1,98 +1,78 @@
 # my-adf
-Alfresco Angular 2  Application Example
+Alfresco ADF Rating Application Example
 
 ## Prerequisites
 
 Before you start using this development framework, make sure you have installed all required software and done all the
 necessary configuration, see this [page](https://github.com/Alfresco/alfresco-ng2-components/blob/master/PREREQUISITES.md).
+This directive was inspired by the jQuery (star)rating plugin RateIt. However this package will work without jQuery and is very light weight.
 
-## Building and Running
 
-Install dependencies
+## Getting Started
 
-```sh
-npm install
-```
+You can install an angular-rateit package easily using Bower:
 
-### Development build
+bower install angular-rateit
+## And add the files to your index page:
 
-```sh
-npm start
-```
+<link rel="stylesheet" href="angular-rateit/dist/ng-rateit.css" />
+<script src="angular-rateit/dist/ng-rateit.js"></script>
+Finally add 'ngRateIt' to your main module's list of dependencies:
 
-This command compiles and starts the project in watch mode.
-Browser will automatically reload upon changes.
-Upon start you can navigate to `http://localhost:3000` with your preferred browser.
+angular.module('myApp', [
+	...
+    'ngRateIt',
+    ...
+]);
+## How to use
 
-#### Important notes
+To get it working simply add this block of code to your view:
 
-This script is recommended for development environment and not suited for headless servers and network access.
+<ng-rate-it ng-model="test.rateit"></ng-rate-it>
+## N.B. When using angular 1.2.* use <div ng-rate-it ng-model="test.rateit"></div>
 
-### Production build
+ For more advanced functionality you can add a couple attributes:
 
-```sh
-npm run build
-npm run start:dist
-```
+<ng-rate-it 
+	ng-model = "String, Number, Array"
+	min = "Double"
+	max = "Double"
+	step = "Double"
+	read-only = "Boolean"
+	pristine = "Boolean"
+	resetable = "Boolean"
+	star-width = "Integer"
+	star-height = "Integer"
+	rated = "Function(rating)"
+	reset = "Function(rating)"
+	before-rated = "Function(newRating): return promise"
+	before-reset = "Function(rating): return promise"
+	>
+</ng-rate-it>
+## Customization
 
-This command builds project in `production` mode.
-All output is placed to `dist` folder and can be served your preferred web server.
-You should need no additional files outside the `dist` folder.
+You can easily add your own star style via css. You can use the star-width and star-height attributes to make the 'stars' bigger if necessary.
 
-#### Important notes
+<style>
+	.custom.ngrateit .ngrateit-star{
+		background-image: url('custom.png');
+	}
+</style>
+<ng-rate-it ng-model="model.custom" class="custom"></ng-rate-it>
+## Release Note:
 
-By default demo application is configured to use [wsrv](https://www.npmjs.com/package/wsrv) tool (lightweight web server)
-to serve production build output. It will be running at `0.0.0.0` address with port `3000` and allow you accessing your application
-via network. However you can use any web server of your choice in production.
+V4.0.0
 
-## i18n support
-
-To support a new language you need to create your language file (.json) and add it to `i18n/` folder.
-
-```json
-{
-        "username" : "Username",
-        "input-required-message": "Required",
-        "input-min-message": "Your username needs to be at least 4 characters.",
-        "login-button": "Login"
+BREAKING: The callback function binding has changed form two-way to method binding. This will allow you to pass your own variables to the callback function AND the current rating is passed in the rating parameter:
+<ng-rate-it ng-model="model.basic" rated="myCallback(rating, 'Your own var')"></ng-rate-it>
+$scope.myCallback = function (rating, cusotmVar) {
+	console.log(rating, customVar);
 }
-```
+To upgrade from v3 to v4, just add () after your function name.
 
-Directory structure:
-```
-.
-├── custom-translation/
-│   ├──i18n/
-│      ├──
-│      ├── en.json
-│      ├── it.json
-│      └── fr.json
-```
+V3.0.0
 
-## Custom-files
-
-If you need to add custom files on your project you can add this files in the folders public
-
-```
-.
-├── public/
-│   ├── images/
-│   ├── css/
-│   └── js/
-```
-
-the public folder above wil be copied in the root of your project and you can refer to them for example as
-
- * './images/custom_image.png'
- * './js/custom_script.js'
- * './css/custom_style.css'
-
- 
-## History
-
-For detailed changelog, check [Releases](https://github.com//my-adf/releases).
-
-## Contributors
-
-[Contributors](https://github.com//my-adf/graphs/contributors)
-  
+BREAKING: The over callback is removed.
+BREAKING: If you're using your own template, you need to update it.
+Template and CSS file are refactored in order to support mobile divices.
+Moved calculations from template to controller.
