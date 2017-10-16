@@ -3,7 +3,7 @@
     </button> 
     <rating-dailog-component [(visible)]="showDialog">
         <div *ngIf="rateDiv">
-        <h2>Rate<br> this <br>page</h2>
+        <h2 style="font-size: xx-large;"><br>Rate<br> this <br>page <br></h2>
         <md-button-toggle md-menu-item (click)="getRating('good')"><i class="material-icons green600">sentiment_very_satisfied</i></md-button-toggle>
           <h4>Good</h4>
           <md-button-toggle md-menu-item (click)="getRating('ok')"><i class="material-icons yellow600">sentiment_neutral</i></md-button-toggle>
@@ -12,9 +12,9 @@
           <button (click)="showDialog = !showDialog" class="dialog__close-btn"><h1>X</h1></button>
         </div>
         <div *ngIf="ratedDiv" class="mydiv">
-          <div *ngIf="ratingValue=='good'">You rated this page as <span class="ratedClassGreen"> Good</span> <i class="material-icons green600">sentiment_very_satisfied</i></div>
-          <div *ngIf="ratingValue=='ok'">You rated this page as <span class="ratedClassYellow"> Ok</span><i class="material-icons yellow600">sentiment_neutral</i> </div>
-          <div *ngIf="ratingValue=='poor'">You rated this page as<span class="ratedClassRed"> Poor</span><i class="material-icons red600">sentiment_very_dissatisfied</i> </div>
+          <div *ngIf="ratingValue=='good'" class="div1">You rated this page as <span class="ratedClassGreen"> Good</span> <i class="material-icons green600">sentiment_very_satisfied</i></div>
+          <div *ngIf="ratingValue=='ok'" class="div1">You rated this page as <span class="ratedClassYellow"> Ok</span><i class="material-icons yellow600">sentiment_neutral</i> </div>
+          <div *ngIf="ratingValue=='poor'" class="div1">You rated this page as<span class="ratedClassRed"> Poor</span><i class="material-icons red600">sentiment_very_dissatisfied</i> </div>
             <h3>provide additional feedback</h3>
             <h4>Did this content save you the trouble of <br>having call support?</h4>
        <md-radio-group class="example-radio-group" [(ngModel)]="answer1">
@@ -41,10 +41,7 @@
        <textarea ng-model="myTextarea" class="text-area-style" cols="50"
        rows="7"></textarea>    </div>
        <div style="padding-left: 8px;"><button (click)="submitRating()" class="buttonClass">Submit Feedback</button></div>    
-       <div (click)="showDialog = !showDialog" style="padding-left: 191px;
-       font-size: 20px;
-       color: #319EDE;
-       font-weight: bold;font-family: sans-serif;">No Thanks</div>
+       <div class="CloseButtonClass" (click)="showDialog = !showDialog">No Thanks</div>
           </div>
           <div>
             <button (click)="showDialog = !showDialog" class="dialog__close-btn"><h1>X</h1></button>

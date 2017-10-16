@@ -18,8 +18,7 @@ export class RatingComponent implements OnInit {
     answer1: string;
     message:string;
     answer2: string;
-   // private myUrl = 'http://localhost:2017/IPEMS/task/saveUserRating';
-   private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService/Good/yes/1/notbad';
+   private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';
       seasons = [
         'Yes',
         'No',
@@ -52,7 +51,7 @@ export class RatingComponent implements OnInit {
     submitRating() {
         this.rateDiv=false;
         this.ratedDiv=false;
-    this.http.get(this.myUrl).toPromise()
+    this.http.get(this.myUrl+'/'+this.ratingValue+'/'+this.answer1+'/'+this.answer2+'/'+this.answer1).toPromise()
     .then(response => this.message = 'Rating saved Successfully');
       } 
 }
