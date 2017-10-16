@@ -33,9 +33,13 @@ You can install an ADF application using [ADF Documentation](https://community.a
 
   declarations: [
         AppComponent,
+        
          ...
+         
          ...
+         
         RatingDailog,
+        
         RatingComponent
     ],
     
