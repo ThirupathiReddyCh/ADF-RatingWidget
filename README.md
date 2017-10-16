@@ -43,15 +43,17 @@ You can install an ADF application using [ADF Documentation](https://community.a
         RatingComponent
     ],
     
+### Step 4: Customization in REST Service
+
+You can easily add your own REST-Service via *rating.component.ts* file.
+
+ private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';    
+    
 ## How to use
 
 To get it working simply add this block of code to your view (app.component.html):
 
-  <rating-UI></rating-UI>
+  * <rating-UI> </rating-UI> *
+  
 
-## Customization in REST Service
-
-You can easily add your own REST-Service via *rating.component.ts* file.
-
- private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';
 
