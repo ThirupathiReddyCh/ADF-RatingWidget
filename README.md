@@ -10,11 +10,17 @@ This directive was inspired by the jQuery (star)rating plugin RateIt. However th
 
 ## Getting Started
 
-You can install an angular-rateit package easily using Bower:
+You can install an ADF application package like below.
+https://community.alfresco.com/docs/DOC-4595-getting-started-with-alfresco-application-development-framework
 
-bower install angular-rateit
-## And add the files to your index page:
+## Create a rating folder in components package. add the following files in rating folder:
 
+ rating.component.ts
+ rating.component.css
+ rating-dailog.component.html
+ rating-dailog.component.ts
+ rating-UI.html
+ 
 <link rel="stylesheet" href="angular-rateit/dist/ng-rateit.css" />
 <script src="angular-rateit/dist/ng-rateit.js"></script>
 Finally add 'ngRateIt' to your main module's list of dependencies:
