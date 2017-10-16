@@ -57,5 +57,7 @@ To get it working simply add this line of code to your view (app.component.html)
 
   \<rating-UI> \</rating-UI>
   
-
+ *You can see the rating Widget like below.*
+ 
+![alt text](https://github.com/ThirupathiReddyCh/ADF-RatingWidget/blob/master/ratingImage.png)
 
