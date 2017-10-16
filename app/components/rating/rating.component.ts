@@ -18,7 +18,8 @@ export class RatingComponent implements OnInit {
     answer1: string;
     message:string;
     answer2: string;
-   private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';
+    feedback: string;
+   private myUrl = 'http://localhost:2017/RatingWidgetREST/rest/ratingService';
       seasons = [
         'Yes',
         'No',
@@ -48,10 +49,11 @@ export class RatingComponent implements OnInit {
         this.ratedDiv=true;
         }
 
-    submitRating() {
+    submitRating(feedback:string) {
         this.rateDiv=false;
         this.ratedDiv=false;
-    this.http.get(this.myUrl+'/'+this.ratingValue+'/'+this.answer1+'/'+this.answer2+'/'+this.answer1).toPromise()
-    .then(response => this.message = 'Rating saved Successfully');
+        this.feedback=feedback;
+    this.http.get(this.myUrl+'/'+this.ratingValue+'/'+this.answer1+'/'+this.answer2+'/'+this.feedback).toPromise()
+    .then(response => this.message = 'Rating Submitted Successfully');
       } 
 }
