@@ -38,9 +38,9 @@
        <div class="example-selected-value">Your answer is: {{answer2}}</div>
        <h4>What can we do do to improve this page?</h4>
        <div style="padding-left: 8px;">
-       <textarea ng-model="myTextarea" class="text-area-style" cols="50"
+       <textarea ref-textarea [(ngModel)]="textValue" class="text-area-style" cols="50"
        rows="7"></textarea>    </div>
-       <div style="padding-left: 8px;"><button (click)="submitRating()" class="buttonClass">Submit Feedback</button></div>    
+       <div style="padding-left: 8px;"><button (click)="submitRating(textarea.value)" class="buttonClass">Submit Feedback</button></div>    
        <div class="CloseButtonClass" (click)="showDialog = !showDialog">No Thanks</div>
           </div>
           <div>
