@@ -4,9 +4,7 @@ Alfresco ADF Rating Application Example
 ## Prerequisites
 
 Before you start using this development framework, make sure you have installed all required software and done all the
-necessary configuration, see this [page](https://github.com/Alfresco/alfresco-ng2-components/blob/master/PREREQUISITES.md).
-This directive was inspired by the jQuery (star)rating plugin RateIt. However this package will work without jQuery and is very light weight.
-
+necessary configuration.
 
 ## Getting Started
 
