@@ -11,7 +11,7 @@ necessary configuration.
 You can install an ADF application using [ADF Documentation](https://community.alfresco.com/docs/DOC-4595-getting-started-with-alfresco-application-development-framework).
 
 ### Step 1 :
-# Create a folder /components/rating in components package. add the following files in rating folder:
+ Create a folder /components/rating in components package. add the following files in rating folder:
 
  * rating.component.ts
  * rating.component.css
@@ -27,41 +27,35 @@ You can install an ADF application using [ADF Documentation](https://community.a
   
   Add the above two import statements in the **app.module.ts** file
   
- 
-<link rel="stylesheet" href="angular-rateit/dist/ng-rateit.css" />
-<script src="angular-rateit/dist/ng-rateit.js"></script>
-Finally add 'ngRateIt' to your main module's list of dependencies:
+  ### Step 3 :
+  
+  Add *RatingDailog, RatingComponent* to declarations in **app.module.ts** files:
 
-angular.module('myApp', [
-	...
-    'ngRateIt',
-    ...
-]);
+  declarations: [
+        AppComponent,
+         ...
+         ...
+        RatingDailog,
+        RatingComponent
+    ],
+    
 ## How to use
 
-To get it working simply add this block of code to your view:
+To get it working simply add this block of code to your view (app.component.html):
 
-<ng-rate-it ng-model="test.rateit"></ng-rate-it>
-## N.B. When using angular 1.2.* use <div ng-rate-it ng-model="test.rateit"></div>
+  <rating-UI></rating-UI>
+  
+  Ex:
+   <md-menu #appMenu="mdMenu">
+     ...
+     ...
+    </md-menu>
+    <rating-UI></rating-UI>
+</md-toolbar>
+<router-outlet></router-outlet>
 
  For more advanced functionality you can add a couple attributes:
 
-<ng-rate-it 
-	ng-model = "String, Number, Array"
-	min = "Double"
-	max = "Double"
-	step = "Double"
-	read-only = "Boolean"
-	pristine = "Boolean"
-	resetable = "Boolean"
-	star-width = "Integer"
-	star-height = "Integer"
-	rated = "Function(rating)"
-	reset = "Function(rating)"
-	before-rated = "Function(newRating): return promise"
-	before-reset = "Function(rating): return promise"
-	>
-</ng-rate-it>
 ## Customization
 
 You can easily add your own star style via css. You can use the star-width and star-height attributes to make the 'stars' bigger if necessary.
