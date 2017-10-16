@@ -12,12 +12,14 @@ You can install an ADF application using [ADF Documentation](https://community.a
 
 ### Step 1 :
  Create a folder *rating* in ..app//components/rating package. add the following files in rating folder:
-
+ 
  * rating.component.ts
  * rating.component.css
  * rating-dailog.component.html
  * rating-dailog.component.ts
  * rating-UI.html
+ 
+ [Download Files Here](https://github.com/ThirupathiReddyCh/ADF-RatingWidget/tree/master/app/components/rating)
  
  ### Step 2 :
  
