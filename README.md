@@ -49,7 +49,10 @@ You can install an ADF application using [ADF Documentation](https://community.a
 
 You can easily add your own REST-Service via *rating.component.ts* file.
 
- private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';    
+ private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';
+ 
+ you can download the corresponding 
+  [REST-Service](https://github.com/ThirupathiReddyCh/ADF-RatingWidget/tree/master/app/components/rating) .
     
 ### Step 5 : How to use
 
