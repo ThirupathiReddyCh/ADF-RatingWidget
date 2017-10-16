@@ -55,7 +55,7 @@ You can easily add your own REST-Service via *rating.component.ts* file.
 
 To get it working simply add this line of code to your view (app.component.html):
 
-  \<rating-UI> </rating-UI>\
+  \<rating-UI> \</rating-UI>
   
 
 
