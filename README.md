@@ -11,7 +11,7 @@ necessary configuration.
 You can install an ADF application using [ADF Documentation](https://community.alfresco.com/docs/DOC-4595-getting-started-with-alfresco-application-development-framework).
 
 ### Step 1 :
- Create a folder /components/rating in components package. add the following files in rating folder:
+ Create a folder *rating* in ..app//components/rating package. add the following files in rating folder:
 
  * rating.component.ts
  * rating.component.css
@@ -48,42 +48,10 @@ You can install an ADF application using [ADF Documentation](https://community.a
 To get it working simply add this block of code to your view (app.component.html):
 
   <rating-UI></rating-UI>
-  
-  Ex:
-   <md-menu #appMenu="mdMenu">
-     ...
-     ...
-    </md-menu>
-    <rating-UI></rating-UI>
-</md-toolbar>
-<router-outlet></router-outlet>
 
- For more advanced functionality you can add a couple attributes:
+## Customization in REST Service
 
-## Customization
+You can easily add your own REST-Service via *rating.component.ts* file.
 
-You can easily add your own star style via css. You can use the star-width and star-height attributes to make the 'stars' bigger if necessary.
+ private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';
 
-<style>
-	.custom.ngrateit .ngrateit-star{
-		background-image: url('custom.png');
-	}
-</style>
-<ng-rate-it ng-model="model.custom" class="custom"></ng-rate-it>
-## Release Note:
-
-V4.0.0
-
-BREAKING: The callback function binding has changed form two-way to method binding. This will allow you to pass your own variables to the callback function AND the current rating is passed in the rating parameter:
-<ng-rate-it ng-model="model.basic" rated="myCallback(rating, 'Your own var')"></ng-rate-it>
-$scope.myCallback = function (rating, cusotmVar) {
-	console.log(rating, customVar);
-}
-To upgrade from v3 to v4, just add () after your function name.
-
-V3.0.0
-
-BREAKING: The over callback is removed.
-BREAKING: If you're using your own template, you need to update it.
-Template and CSS file are refactored in order to support mobile divices.
-Moved calculations from template to controller.
