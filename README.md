@@ -8,12 +8,12 @@ necessary configuration.
 
 ## Getting Started
 
-You can install an ADF application package like below.
+You can install an ADF application package like below:
 https://community.alfresco.com/docs/DOC-4595-getting-started-with-alfresco-application-development-framework
 
 ## Create a rating folder in components package. add the following files in rating folder:
 
- * rating.component.ts\n
+ * rating.component.ts
  * rating.component.css
  * rating-dailog.component.html
  * rating-dailog.component.ts
