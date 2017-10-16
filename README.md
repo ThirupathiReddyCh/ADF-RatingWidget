@@ -51,11 +51,11 @@ You can easily add your own REST-Service via *rating.component.ts* file.
 
  private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';    
     
-## Step 5 : How to use
+### Step 5 : How to use
 
-To get it working simply add this block of code to your view (app.component.html):
+To get it working simply add this line of code to your view (app.component.html):
 
-  *<rating-UI> </rating-UI>*
+  \\<rating-UI> </rating-UI>\\
   
 
 
