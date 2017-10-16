@@ -1,5 +1,5 @@
-# my-adf
-Alfresco ADF Rating Application Example
+
+## Alfresco ADF Rating Application Example
 
 ## Prerequisites
 
