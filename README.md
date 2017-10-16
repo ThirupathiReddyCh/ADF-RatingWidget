@@ -52,7 +52,7 @@ You can easily add your own REST-Service via *rating.component.ts* file.
  private myUrl = 'http://localhost:2017/RESTfulExample/rest/ratingService';
  
  you can download the corresponding 
-  [REST-Service](https://github.com/ThirupathiReddyCh/ADF-RatingWidget/tree/master/app/components/rating) .
+  [REST-Service](https://github.com/ThirupathiReddyCh/RatingWidget-REST) .
     
 ### Step 5 : How to use
 
