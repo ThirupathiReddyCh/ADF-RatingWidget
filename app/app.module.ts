@@ -47,6 +47,7 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routes';
 import { ThemePickerModule } from './components/theme-picker/theme-picker';
 import {RatingComponent} from './components/rating/rating.component';
+import {RatingDailog} from './components/rating/rating-dailog.component';
 import {
   HomeComponent,
   SettingsComponent,
@@ -62,8 +63,7 @@ import {
   FormNodeViewerComponent,
   FilesComponent, 
   AboutComponent,
-  LoginDemoComponent,
-  RatingDailog
+  LoginDemoComponent
 } from './components/index';
 
 let appConfigFile = 'app.config-dev.json';

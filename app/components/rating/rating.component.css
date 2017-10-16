@@ -101,3 +101,14 @@
   padding: 0px 5px;
   outline: none;
   }
+  .CloseButtonClass {
+  padding-left: 160px;
+  font-size: 20px;
+  color: #319EDE;
+  font-weight: bold;
+  font-family: sans-serif;
+  padding-top: 10px;
+  }
+  .div1 {
+  font-size: xx-large;
+  }
