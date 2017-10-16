@@ -13,11 +13,11 @@ https://community.alfresco.com/docs/DOC-4595-getting-started-with-alfresco-appli
 
 ## Create a rating folder in components package. add the following files in rating folder:
 
- rating.component.ts\n
- rating.component.css
- rating-dailog.component.html
- rating-dailog.component.ts
- rating-UI.html
+ * rating.component.ts\n
+ * rating.component.css
+ * rating-dailog.component.html
+ * rating-dailog.component.ts
+ * rating-UI.html
  
 <link rel="stylesheet" href="angular-rateit/dist/ng-rateit.css" />
 <script src="angular-rateit/dist/ng-rateit.js"></script>
