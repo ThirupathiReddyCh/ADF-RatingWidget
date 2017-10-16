@@ -13,7 +13,7 @@ https://community.alfresco.com/docs/DOC-4595-getting-started-with-alfresco-appli
 
 ## Create a rating folder in components package. add the following files in rating folder:
 
- rating.component.ts
+ rating.component.ts\n
  rating.component.css
  rating-dailog.component.html
  rating-dailog.component.ts
