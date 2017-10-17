@@ -11,7 +11,7 @@ necessary configuration.
 You can install an ADF application using [ADF Documentation](https://community.alfresco.com/docs/DOC-4595-getting-started-with-alfresco-application-development-framework).
 
 ### Step 1 :
- Create a folder *rating* in ..app//components/rating package. add the following files in rating folder:
+ Create a folder *rating* in ..app/components/rating package. add the following files in rating folder:
  
  * rating.component.ts
  * rating.component.css
